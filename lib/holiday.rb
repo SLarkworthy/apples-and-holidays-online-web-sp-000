@@ -52,6 +52,7 @@ def all_winter_holiday_supplies(holiday_hash)
   winter_item_array
 end
 
+<<<<<<< HEAD
 
 # this also worked but didn't pass the test because it technically didn't puts out line by line
 # I got it to work using a variety of print vs. puts but the test didn't like that so I made a new method
@@ -83,6 +84,8 @@ end
 # end
 
 
+=======
+>>>>>>> a5c705fba6b0dfc1ff725641a548ad00805d0460
 def all_supplies_in_holidays(holiday_hash)
   holiday_hash.each do |season, holidays|
   puts season.to_s.capitalize! + ":"
@@ -91,15 +94,37 @@ def all_supplies_in_holidays(holiday_hash)
       split_holidays.each do |hol_word|
         hol_word.capitalize!
       end
+<<<<<<< HEAD
         if items.length == 1
           puts "  " + split_holidays.join(" ") + ": " + items[0]
         elsif items.length > 1
           puts "  " + split_holidays.join(" ") + ": " + items[0] + ", " + items[1]
+=======
+      print "  " + split_holidays.join(" ") + ":"
+      items.each_with_index do |item, index|
+        if items.length == 1
+          puts " " + item
+        elsif items.length > 1
+          if index == items.length - 1
+            puts " " + item
+          else
+            print " " + item + ","
+          end
+        end
+>>>>>>> a5c705fba6b0dfc1ff725641a548ad00805d0460
       end
     end
   end
 end
 
+<<<<<<< HEAD
+=======
+
+
+def all_holidays_with_bbq(holiday_hash)
+  # return an array of holiday names (as symbols) where supply lists
+  # include the string "BBQ"
+>>>>>>> a5c705fba6b0dfc1ff725641a548ad00805d0460
 
 def all_holidays_with_bbq(holiday_hash)
 bbq_days = []
